@@ -5,3 +5,6 @@ Search and Scrape lyric from Azlyrics.com
 [![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/Edqe14/AzylricsScraper/commit/master)
 
 ## Quick Start
+```js
+const scraper = require('')
+```
