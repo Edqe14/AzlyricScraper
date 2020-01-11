@@ -1,8 +1,12 @@
 # AzlyricsScraper
 Search and Scrape lyric from [Azlyrics.com](https://www.azlyrics.com/)
 
-[![License](https://img.shields.io/pypi/l/ansicolortags.svg)](https://github.com/Edqe14/AzylricsScraper/blob/master/LICENSE)
-[![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/Edqe14/AzylricsScraper/commit/master)
+[![GitHub license](https://img.shields.io/github/license/Edqe14/AzlyricScraper.svg?style=for-the-badge)](https://github.com/Edqe14/AzlyricsScraper/blob/master/LICENSE)
+[![Documentation Status](https://readthedocs.org/projects/ansicolortags/badge/?version=latest)](https://github.com/Edqe14/AzlyricScraper/blob/master/README.md)
+[![GitHub release](https://img.shields.io/github/v/release/Edqe14/AzlyricScraper.svg?style=for-the-badge)](https://github.com/Edqe14/AzlyricScraper/releases/)
+![Dependencies](https://img.shields.io/david/dev/Edqe14/AzlyricScraper)
+[![GitHub last commit](https://img.shields.io/github/last-commit/Edqe14/AzlyricScraper?style=for-the-badge)](https://github.com/Edqe14/AzlyricsScraper/commit/master)
+![Maintenance](https://img.shields.io/maintenance/yes/2020?style=for-the-badge)
 
 ## Quick Start
 ```js
