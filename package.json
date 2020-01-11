@@ -1,17 +1,15 @@
 {
-  "name": "lyric-scrape",
+  "name": "azlyrics-scraper",
   "version": "1.0.0",
   "description": "",
   "main": "scrape.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Edqe",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "cheerio": "^1.0.0-rc.3",
-    "readline-sync": "^1.4.10",
     "request": "^2.88.0"
   }
 }
