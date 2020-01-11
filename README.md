@@ -1,3 +1,4 @@
 # AzylricsScraper
  
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/Edqe14/AzylricsScraper/commit/master)
+[![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
+[![Generic badge](https://img.shields.io/badge/Maintained-yes-green.svg)](https://shields.io/)
