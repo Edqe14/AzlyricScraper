@@ -6,5 +6,19 @@ Search and Scrape lyric from Azlyrics.com
 
 ## Quick Start
 ```js
-const scraper = require('')
+const scraper = require("azlyrics-scraper");
+// Or use ES6 import
+import scraper from "azlyrics-scraper";
+
+const title = "bazzi mine";
+scraper.getLyric(title).then(result => {
+    console.log(result.join(""));
+}).catch(error => {
+    // Error handling
+});
 ```
+
+## Docs
+**search(query)**: Returns an array of search results from Azlyrics. returns Promise(result<Array>, error)  
+**getLyric(query)**: Returns an array of queried lyrics. returns Promise(result<Array>, error)  
+**getLyricFromLink(uri)**: _Must Azlyrics URI_ Returns an array of queried lyrics. returns Promise(result<Array>, error)
