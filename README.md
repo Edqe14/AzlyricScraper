@@ -1,5 +1,5 @@
 # AzlyricsScraper
-Search and Scrape lyric from Azlyrics.com
+Search and Scrape lyric from [Azlyrics.com](https://www.azlyrics.com/)
 
 [![License](https://img.shields.io/pypi/l/ansicolortags.svg)](https://github.com/Edqe14/AzylricsScraper/blob/master/LICENSE)
 [![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/Edqe14/AzylricsScraper/commit/master)
@@ -19,6 +19,6 @@ scraper.getLyric(title).then(result => {
 ```
 
 ## Docs
-**search(query)**: Returns an array of search results from Azlyrics. returns Promise(result<Array>, error)  
-**getLyric(query)**: Returns an array of queried lyrics. returns Promise(result<Array>, error)  
-**getLyricFromLink(uri)**: _Must Azlyrics URI_ Returns an array of queried lyrics. returns Promise(result<Array>, error)
+**search(query)**: Returns an array of search results from Azlyrics. returns Promise(result\<Array\>, error)  
+**getLyric(query)**: Returns an array of queried lyrics. returns Promise(result\<Array\>, error)  
+**getLyricFromLink(uri)**: _Must Azlyrics URI_ Returns an array of queried lyrics. returns Promise(result\<Array\>, error)
