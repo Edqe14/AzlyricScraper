@@ -5,7 +5,7 @@
 //   | |  | |___ /\__/ /  | |  
 //   \_/  \____/ \____/   \_/
 
-import scraper from "../scrape.js";
+const scraper = require('../scrape.js');
 
 // Search
 scraper.search('bazzi mine').then(a => {

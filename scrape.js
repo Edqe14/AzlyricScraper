@@ -1,7 +1,7 @@
-import search from "./src/search.js";
-import lyrics from "./src/lyrics.js"
+const search = require('./src/search.js');
+const lyrics = require('./src/lyrics.js');
 
-export default {
+module.exports = {
     search(query) {
         return new Promise((resolve, reject) => {
             search.search(query).then(dom => {

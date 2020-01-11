@@ -5,8 +5,8 @@
 //   | |  | |___ /\__/ /  | |  
 //   \_/  \____/ \____/   \_/
 
-import readline from "readline-sync";
-import scraper from "../scrape.js";
+const readline = require('readline-sync');
+const scraper = require('../scrape.js');
 
 let input = readline.question('What title of the song? ');
 

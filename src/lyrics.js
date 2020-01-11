@@ -1,5 +1,5 @@
-import request from "request";
-import cheerio from "cheerio";
+const request = require('request');
+const cheerio = require('cheerio');
 String.prototype.format = function() {
     'use strict'
     let txt = ''+this;
@@ -13,7 +13,7 @@ String.prototype.format = function() {
     return txt;
 };
 
-export default {
+module.exports = {
     reqLyric(url) {
         return new Promise((resolve, reject) => {
             request({

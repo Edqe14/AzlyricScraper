@@ -1,7 +1,6 @@
-import request from "request";
-import cheerio from "cheerio";
-
-export default {
+const request = require('request');
+const cheerio = require('cheerio');
+module.exports = {
     search(query) {
         return new Promise((resolve, reject) => {
             request({
