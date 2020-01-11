@@ -21,4 +21,7 @@ scraper.getLyric(title).then(result => {
 ## Docs
 **search(query)**: Returns an array of search results from Azlyrics. returns Promise(result\<Array\>, error)  
 **getLyric(query)**: Returns an array of queried lyrics. returns Promise(result\<Array\>, error)  
-**getLyricFromLink(uri)**: _Must Azlyrics URI_ Returns an array of queried lyrics. returns Promise(result\<Array\>, error)
+**getLyricFromLink(uri)**: **_Must Azlyrics URI_** Returns an array of queried lyrics. returns Promise(result\<Array\>, error)
+
+## License
+> **This project is using MIT License. [Read Here](https://github.com/Edqe14/AzylricsScraper/blob/master/LICENSE)**
