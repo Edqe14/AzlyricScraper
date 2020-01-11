@@ -1,5 +1,5 @@
-const request = require('request');
-const cheerio = require('cheerio');
+import request from "request";
+import cheerio from "cheerio";
 String.prototype.format = function() {
     'use strict'
     let txt = ''+this;
@@ -13,48 +13,36 @@ String.prototype.format = function() {
     return txt;
 };
 
-/**
- * Request a lyric page
- * @param {String} url Lyric page URI
- */
-function reqLyric(url) {
-    return new Promise((resolve, reject) => {
-        request({
-            url: url,
-            headers: {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36",
-              "Connection": "keep-alive"
-            }
-        }, (e, res, body) => {
-            if(e) return reject(e);
-            else if (res.statusCode !== 200) {
-                const error = new Error(`Unexpected status code: ${res.statusCode}`);
-                error.res = res;
-                return reject(error);
-            }
-            return resolve(body);
-        })
-    })
-}
+export default {
+    reqLyric(url) {
+        return new Promise((resolve, reject) => {
+            request({
+                url: url,
+                headers: {
+                  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36",
+                  "Connection": "keep-alive"
+                }
+            }, (e, res, body) => {
+                if(e) return reject(e);
+                else if (res.statusCode !== 200) {
+                    const error = new Error(`Unexpected status code: ${res.statusCode}`);
+                    error.res = res;
+                    return reject(error);
+                }
+                return resolve(body);
+            });
+        });
+    },
+    extractLyric(body) {
+        const lyric = [];
+        const $ = cheerio.load(body);
 
-/**
- * Extract lyric from page
- * @param {String} body HTML DOM String
- */
-function extractLyric(body) {
-    const lyric = [];
-    const $ = cheerio.load(body);
-
-    let lyrics = $('.row .col-xs-12 div').each((_, e) => {
-        if($(e).attr('class')) return;
-        else {
-            $(e).html().format().split('\n').forEach(t => lyric.push(t));
-        };
-    });
-    return lyric;
-}
-
-module.exports = {
-    reqLyric,
-    extractLyric
+        let lyrics = $('.row .col-xs-12 div').each((_, e) => {
+            if($(e).attr('class')) return;
+            else {
+                $(e).html().format().split('\n').forEach(t => lyric.push(t));
+            };
+        });
+        return lyric;
+    }
 }
