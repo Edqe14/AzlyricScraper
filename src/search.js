@@ -1,7 +1,7 @@
 const request = require('request');
 const cheerio = require('cheerio');
 module.exports = {
-    search(query) {
+    fetch(query) {
         return new Promise((resolve, reject) => {
             request({
                 url: `http://search.azlyrics.com/search.php?q=${query}`,

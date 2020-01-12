@@ -14,7 +14,7 @@ String.prototype.format = function() {
 };
 
 module.exports = {
-    reqLyric(url) {
+    fetch(url) {
         return new Promise((resolve, reject) => {
             request({
                 url: url,
@@ -28,7 +28,7 @@ module.exports = {
                     const error = new Error(`Unexpected status code: ${res.statusCode}`);
                     error.res = res;
                     return reject(error);
-                }
+                };
                 return resolve(body);
             });
         });
