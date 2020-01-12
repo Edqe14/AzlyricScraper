@@ -1,6 +1,6 @@
 {
   "name": "azlyrics-scraper",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "scrape.js",
   "scripts": {
@@ -8,6 +8,13 @@
   },
   "author": "Edqe",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Edqe14/AzylricsScraper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Edqe14/AzylricsScraper/issues"
+  },
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
     "request": "^2.88.0"
