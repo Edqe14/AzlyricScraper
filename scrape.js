@@ -3,6 +3,10 @@ const lyrics = require('./src/lyrics.js');
 const hot = require('./src/hot.js');
 
 module.exports = {
+    /**
+     * Search songs from Azlyrics
+     * @param {String} query Query Input
+     */
     search(query) {
         return new Promise((resolve, reject) => {
             if(!query) return reject(new Error("Invalid Query"));
@@ -11,6 +15,10 @@ module.exports = {
             }, rejection => reject(rejection));
         });
     },
+    /**
+     * Search and get a song lyric
+     * @param {String} query Query Input
+     */
     getLyric(query) {
         return new Promise((resolve, reject) => {
             if(!query) return reject(new Error("Invalid Query"));
@@ -21,6 +29,10 @@ module.exports = {
             }, rejection => reject(rejection));
         });
     },
+    /**
+     * Search and get a song lyric using link
+     * @param {String} link Azlyrics URI
+     */
     getLyricFromLink(link) {
         return new Promise((resolve, reject) => {
             if(!link) return reject(new Error("Invalid URI"));
@@ -29,6 +41,9 @@ module.exports = {
             }, rejection => reject(rejection));
         });
     },
+    /**
+     * Returns an Array of popular songs
+     */
     hotSongs() {
         return new Promise((resolve, reject) => {
             hot.fetch().then(dom => {
