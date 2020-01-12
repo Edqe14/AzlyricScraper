@@ -6,7 +6,6 @@ Search and Scrape lyric from [Azlyrics.com](https://www.azlyrics.com/) using Nod
 ![Dependencies](https://img.shields.io/librariesio/release/npm/azlyrics-scraper?style=for-the-badge)
 ![Maintenance](https://img.shields.io/maintenance/yes/2020?style=for-the-badge)
 ![Open Issues](https://img.shields.io/bitbucket/issues-raw/Edqe14/AzlyricScraper?style=for-the-badge)
-![GitHub repo size](https://img.shields.io/github/repo-size/Edqe14/AzlyricScraper?style=for-the-badge)
 
 ## Quick Start
 ```js
