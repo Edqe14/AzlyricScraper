@@ -1,6 +1,6 @@
 {
   "name": "azlyrics-scraper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "scrape.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "author": "Edqe",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "cheerio": "^1.0.0-rc.3",
     "request": "^2.88.0"
   }
