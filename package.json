@@ -1,6 +1,6 @@
 {
   "name": "azlyrics-scraper",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "scrape.js",
   "scripts": {
