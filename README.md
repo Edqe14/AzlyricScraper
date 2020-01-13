@@ -13,21 +13,22 @@ const scraper = require("azlyrics-scraper");
 // Or use ES6 import
 import scraper from "azlyrics-scraper";
 
-const title = "bazzi mine";
-const uri = "https://www.azlyrics.com/lyrics/bazzi/mine.html";
-scraper.search(title).then(result => {
+/* <> Required
+ * [] Optional
+ */
+scraper.search(\<Title\>).then(result => {
     console.log(result);
 }).catch(error => {
     // Error handling here
 });
 
-scraper.getLyric(title).then(result => {
+scraper.getLyric(\<Title\>).then(result => {
     console.log(result.join(""));
 }).catch(error => {
     // Error handling here
 });
 
-scraper.getLyricFromLink(uri).then(result => {
+scraper.getLyricFromLink(\<URL\>).then(result => {
     console.log(result.join(""));
 }).catch(error => {
     // Error handling here
@@ -38,13 +39,27 @@ scraper.hotSongs().then(result => {
 }).catch(error => {
     // Error handling here
 });
+
+scraper.randomArtist([First Letter\/Number]).then(result => {
+    console.log(result);
+}).catch(error => {
+    // Error handling here
+});
+
+scraper.randomSong().then(result => {
+    console.log(result);
+}).catch(error => {
+    // Error handling here
+});
 ```
 
 ## Docs
 > **search(query)**: Returns an array of search results from Azlyrics. returns Promise(result\<Array\>, error)  
 > **getLyric(query)**: Returns an array of queried lyrics. returns Promise(result\<Array\>, error)  
 > **getLyricFromLink(uri)**: **_Must Azlyrics URI_** Returns an array of queried lyrics. returns Promise(result\<Array\>, error)  
-> **hotSongs()**: Returns an array of current hot songs. returns Promise(result\<Array\> { title, url }, error)
+> **hotSongs()**: Returns an array of current hot songs. returns Promise(result\<Array\> { title, url }, error)  
+> **randomArtist()**: Returns a url to a random artist on Azlyrics. returns Promise(result\<String\>, error)  
+> **randomSong()**: Returns a object to a random song lyric from Azlyrics. returns Promise(result\<Object\> { title, url }, error)
 
 ## License
 > **This project is using MIT License, © Edqe14. [Read Here](https://github.com/Edqe14/AzylricsScraper/blob/master/LICENSE)**

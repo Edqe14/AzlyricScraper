@@ -1,6 +1,7 @@
 const search = require('./src/search.js');
 const lyrics = require('./src/lyrics.js');
 const hot = require('./src/hot.js');
+const random = require('./src/random.js');
 
 module.exports = {
     /**
@@ -50,5 +51,28 @@ module.exports = {
                 return resolve(hot.extract(dom));
             }, rejection => reject(rejection));
         })
+    },
+    /**
+     * Return a url to a random artist on azlyrics
+     * @param {String=} letter First letter of specified artists
+     */
+    randomArtist(letter) {
+        return new Promise((resolve, reject) => {
+            random.fetch(letter).then(dom => {
+                return resolve(random.randomArtist(dom));
+            }, rejection => reject(rejection));
+        });
+    },
+    /**
+     * Return a object with title and link to lyric on azlyrics
+     */
+    randomSong() {
+        return new Promise((resolve, reject) => {
+            random.fetch().then(dom => {
+                random.fetch(null, random.randomArtist(dom)).then(body => {
+                    return resolve(random.randomSong(body));
+                }, rejection => reject(rejection));
+            }, rejection => reject(rejection));
+        }, rejection => reject(rejection));
     }
 }

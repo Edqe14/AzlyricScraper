@@ -26,3 +26,13 @@ scraper.getLyricFromLink('https://www.azlyrics.com/lyrics/bazzi/mine.html').then
 scraper.hotSongs().then(a => {
     if(a.length > 0) console.log("[HOT SONGS] Checked!");
 }, r => console.log('[HOT SONGS] Something went wrong!'));
+
+// Fetch Random Artist
+scraper.randomArtist().then(a => {
+    if(a.length > 0) console.log("[RANDOM ARTIST] Checked!");
+}, r => console.log('[RANDOM ARTIST] Something went wrong!'));
+
+// Fetch Random Song
+scraper.randomSong().then(a => {
+    if(a.length > 0) console.log("[RANDOM SONG] Checked!");
+}, r => console.log('[RANDOM SONG] Something went wrong!'));
