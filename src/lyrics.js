@@ -39,6 +39,7 @@ module.exports = {
 
         let lyrics = $('.row .col-xs-12 div').each((_, e) => {
             if($(e).attr('class')) return;
+            else if(!$(e).html()) return;
             else {
                 $(e).html().format().split('\n').forEach(t => lyric.push(t));
             };
