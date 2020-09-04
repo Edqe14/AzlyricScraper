@@ -36,7 +36,7 @@ module.exports = {
      */
     getLyricFromLink(link) {
         return new Promise((resolve, reject) => {
-            if(!link) return reject(new Error("Invalid URI"));
+            if(!link || !link.includes('azlyrics')) return reject(new Error("Invalid URI"));
             lyrics.fetch(link).then(dom => {
                 return resolve(lyrics.extractLyric(dom));
             }, rejection => reject(rejection));
