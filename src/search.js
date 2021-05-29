@@ -25,7 +25,7 @@ module.exports = {
         const $ = cheerio.load(body);
 
         if($('.panel table').length > 1) {
-            $('.panel table').next().children('tbody').children('tr').children('a').each((_, e) => arr.push($(e).attr('href')));
+            $('.panel table').children('tbody').children('tr').children('td').children('a').each((_, e) => arr.push($(e).attr('href')));     
         } else {
             $('.panel table tbody tr .visitedlyr a').each((_, e) => arr.push($(e).attr('href')));
         };
